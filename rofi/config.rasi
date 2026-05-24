@@ -1,0 +1,99 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Oranchelo";
+    drun-display-format: "{name}";
+    location: 0;
+    disable-history: true;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+}
+
+@theme "/dev/null"
+
+* {
+    /* Sleek Stark Black Palette */
+    bg-col:      rgba(10, 10, 10, 0.90);
+    /* Slightly more opaque for better legibility at small sizes */
+    bg-entry:    rgba(255, 255, 255, 0.03);
+    bg-sel:      rgba(255, 255, 255, 0.08);
+    text-col:    #ffffff;
+    text-alt:    #777777;
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    /* Explicitly setting a thinner width here (300px instead of default wide sizes) */
+    width: 300px;
+    height: 220px; /* Reduced from 300px for a more compact footprint */
+    border: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+    border-radius: 0px;
+    background-color: @bg-col;
+}
+
+mainbox {
+    background-color: transparent;
+    padding: 4px;
+    /* Tighter padding */
+}
+
+inputbar {
+    /* Added a text textbox to hold the snowflake icon */
+    children: [textbox-prompt-colon, entry];
+    background-color: @bg-entry;
+    border-radius: 0px;
+    padding: 2px 6px;
+    margin: 0px 0px 6px 0px;
+}
+
+/* The Snowflake Icon Configuration */
+textbox-prompt-colon {
+    expand: false;
+    str: "❄";
+    text-color: @text-col;
+    background-color: transparent;
+    padding: 3px 0px 3px 3px;
+}
+
+entry {
+    padding: 4px 6px;
+    text-color: @text-col;
+    background-color: transparent;
+    placeholder: "Search...";
+    placeholder-color: @text-alt;
+}
+
+listview {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    columns: 1;
+    lines: 5;
+    /* Reduced from 7 lines to keep the window short and sweet */
+    background-color: transparent;
+    fixed-height: true;
+}
+
+element {
+    padding: 4px 6px; /* Slightly tighter spacing for a cleaner look */
+    background-color: transparent;
+    text-color: @text-alt;
+    border-radius: 0px;
+}
+
+element-icon {
+    size: 14px;
+    /* Scaled down icons to match the micro layout */
+    margin: 0px 8px 0px 0px;
+}
+
+element selected {
+    background-color: @bg-sel;
+    text-color: @text-col;
+}

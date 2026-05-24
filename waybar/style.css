@@ -1,0 +1,143 @@
+* {
+  border: none;
+  border-radius: 0px; 
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 11px;
+  min-height: 0;
+}
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.88);
+  color: #ffffff;
+  
+  /* Keeps the box corners perfectly sharp */
+  border-radius: 0px; 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  
+  padding: 0px;
+}
+
+#workspaces button {
+  color: #ffffff;
+  box-shadow: inset 0 -3px transparent;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.1); /* Subtle hover for workspaces */
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.focused {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#workspaces button.urgent {
+  background-color: rgba(235, 77, 75, 0.85);
+}
+
+#mode {
+  background-color: rgba(100, 114, 125, 0.85);
+}
+
+/* Combined base rules for bar modules - outlines and text conflicts removed */
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#mpris,
+#tray,
+#mode,
+#idle_inhibitor,
+#window,
+#language {
+  padding: 0 10px;
+  margin: 5px 3px;
+}
+
+#window,
+#workspaces {
+  margin: 4px 4px;
+}
+
+/* All background highlights removed below for a seamless look */
+#clock {
+}
+
+#battery {
+}
+
+#battery.charging {
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: rgba(245, 60, 60, 0.85);
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#backlight {
+}
+
+#network {
+}
+
+#network.disconnected {
+  background-color: rgba(245, 60, 60, 0.85);
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+#mpris {
+}
+
+#temperature {
+}
+
+#temperature.critical {
+  background-color: rgba(235, 77, 75, 0.85);
+}
+
+#tray {
+}
+
+#idle_inhibitor {
+}
+
+#idle_inhibitor.activated {
+  background-color: rgba(236, 240, 241, 0.85);
+  color: #2d3436;
+}
+
+#language {
+}
+
+#window {
+}
+
