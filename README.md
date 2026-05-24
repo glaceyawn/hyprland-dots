@@ -1,0 +1,1 @@
+THIS IS MY OWN CUSTOM RICE! Display size's I was too lazy to change and its set to my own setup. If you want to change it. Go to /home/YOURUSER/.config/hypr/hyprland.conf and at the very top you can change your desktop resolution and monitor(s) using hyprctl monitors.
